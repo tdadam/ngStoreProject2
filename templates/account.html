@@ -1,0 +1,111 @@
+<div>
+
+    <div class="centered alert titleDiv">
+        <h1 class="title" ui-sref="home"><i class="fa fa-shopping-bag largerBag magicTitle"></i> Super-Duper Megastore
+        </h1>
+    </div>
+    <div class="alert featuredDiv featureName">
+
+        <h2 class="whiteFont" style="margin-bottom: 40px">Profile</h2>
+
+        <form ng-if="profile.provider == 'facebook'">
+
+            <fieldset>
+                <legend class="featureName" style="font-size: 25px;">Account</legend>
+                <div>
+                    <label>
+                        <span class="label featureName lrgfont">Profile Name:</span>
+                        <span ng-class="color" ng-bind="profile.name"></span>
+                    </label>
+                </div>
+                <div>
+                    <label style="margin-bottom: 30px"><span class=""></span>
+                        <span class="label featureName lrgfont">Profile Pic:</span>
+                        <img ng-src="{{profile.email}}"/>
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+
+        <form ng-if="profile.provider == 'email'">
+            <toaster-container style="margin: 0 auto" toaster-options="{'time-out': 4000}"></toaster-container>
+
+
+            <fieldset>
+                <legend class="featureName" style="font-size: 25px;">Account</legend>
+                <div>
+                    <label>
+                        <span class="label featureName lrgfont">Name:</span>
+                        <input id="in1" ng-class="color" type="text" ng-change="change()" ng-readonly="readChanged" name="name" ng-model="profile.name"/>
+                        <button ng-show="changeBtn" id="btn1" class="btn btn-warning" ng-click="readChange()"><i class="fa fa-pencil    "></i>
+                            Change Name</button>
+                        <button ng-show="saveBtn" ng-click="saveName()" class="btn btn-success"><i class="fa fa-plus"></i> Save Name</button>
+
+                    </label>
+                </div>
+                <div>
+                    <label style="margin-bottom: 30px"><span class=""></span>
+                        <span class="label featureName lrgfont">Email:</span>
+                        <span class="lrgfont">{{profile.email}}</span>
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+
+        <form ng-if="profile.provider == 'email'">
+            <fieldset>
+                <legend class="featureName" style="font-size: 25px;">Change Password</legend>
+                <div>
+                    <label>
+                        <span class="label featureName lrgfont">Old Password:</span>
+                        <input type="password" ng-keypress="clear()" ng-model="oldpass"/>
+                    </label>
+                </div>
+                <div>
+                    <label style="margin-right: 30px">
+                        <span class="label featureName lrgfont">New Password:</span>
+                        <input type="password"  ng-keypress="clear()" ng-model="newpass"/>
+                    </label>
+                    <label style="margin-bottom: 20px">
+                        <span class="featureName lrgfont centered">Confirm New Password: </span>
+                        <input type="password"  ng-keypress="clear()" ng-model="confirm" ng-change="passwordCheck()"/>
+                    </label>
+                </div>
+                <button class="btn btn-warning" ng-click="changePassword(oldpass, newpass, confirm)"><i class="fa fa-pencil"></i>Change
+                    Password
+                </button>
+
+                <p class="error whiteFont lrgfont" ng-show="err">{{err}}</p>
+                <p class="good whiteFont lrgfont" ng-show="msg">{{msg}}</p>
+                <div style="margin-bottom: 30px"></div>
+            </fieldset>
+        </form>
+
+        <form ng-if="profile.provider == 'email'">
+            <fieldset>
+                <legend class="featureName" style="font-size: 25px;">Change Email</legend>
+                <div>
+                    <label>
+                        <span class="label2 featureName lrgfont">New Email:</span>
+                        <input type="text" ng-keypress="clear()" ng-model="newEmail"/>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span class="label2 featureName lrgfont">Current Password:</span>
+                        <input type="password" ng-keypress="clear()" ng-model="pass"/>
+                    </label>
+                </div>
+
+                <button class="btn btn-warning" ng-click="changeEmail(pass, newEmail)"><i class="fa fa-pencil"></i> Update Email</button>
+
+                <p class="error whiteFont lrgfont" ng-show="emailerr">{{emailerr}}</p>
+                <p class="good whiteFont lrgfont" ng-show="emailmsg">{{emailmsg}}</p>
+                <div style="margin-bottom: 30px"></div>
+            </fieldset>
+        </form>
+        <div class="logoutDiv">
+            <button class="btn logoutBtn" ng-click="logout()">Log Out</button>
+        </div>
+    </div>
+</div>

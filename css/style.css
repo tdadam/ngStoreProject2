@@ -1,0 +1,318 @@
+body {
+    background: #cdd1de;
+    font-family: 'Dosis', sans-serif;
+}
+
+tt.ng-binding {
+    font-family: 'Dosis', sans-serif;
+    color: #1F1F20;
+}
+
+tt {
+    font-family: 'Dosis', sans-serif;
+}
+
+span.ng-binding {
+    font-family: 'Dosis', sans-serif;
+}
+
+.lrgfont {
+    font-size: large;
+}
+
+.nav-style {
+    background-color: #2B4C7E;
+}
+
+.navbar-right {
+    position: relative;
+    right: 30px;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 300px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.controls {
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    font-size: 25px;
+}
+
+.descriptionSmall {
+    text-align: center;
+    font-size: 18px;
+}
+
+.thumbHeight {
+    height: 10%;
+}
+
+.featuredDiv {
+    margin: 0 auto;
+    width: 52vw;
+    color: #DCE0E6;
+    background: #567EBB;
+}
+
+.titleDiv {
+    background: #1F1F20;
+    color: #567EBB;
+}
+
+.title {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.largerBag {
+    font-size: 50px;
+}
+
+.largeIcon {
+    font-size: 20px;
+}
+
+.redFont {
+    color: red
+}
+
+.whiteFont {
+    color: #DCE0E6;
+}
+
+.indi {
+    margin-top: 10%
+}
+
+.featureName {
+    color: #1F1F20;
+}
+
+.thumbDes {
+    color: black;
+}
+
+.searchBtn {
+    background: #DCE0E6;
+    color: #567EBB;
+}
+
+.backBtn {
+    background: #DCE0E6;
+    color: #567EBB;
+}
+
+.right {
+    text-align: right
+}
+
+.left {
+    text-align: left;
+}
+
+.resultsDiv {
+    background: #567EBB;
+    margin: 2% auto;
+    padding: 25px;
+    width: 60vw;
+}
+
+.resultsStyle {
+    margin: 0 0 20px;
+}
+
+.accentBlueBG {
+    background: #567EBB;
+}
+
+.firstResult {
+    border-radius: 25px;
+    border: 4px solid #2B4C7E;
+    padding: 15px;
+}
+
+.otherResults {
+    border-radius: 25px;
+    border: 4px solid #2B4C7E;
+    padding: 15px;
+    color: #1F1F20;
+    margin-bottom: 25px;
+}
+
+.contactDiv {
+    margin-top: 1%;
+    color: #1F1F20;
+    background: #567EBB;
+    font-size: large;
+}
+
+.imgBorder {
+    border: 8px black double;
+}
+
+.linkStyle {
+    color: #2B4C7E;
+}
+
+.linkStyle:hover {
+    color: #DCE0E6;
+}
+
+.noUnderline:hover {
+    text-decoration: none;
+}
+
+.magicTitle {
+    color: #567EBB;
+    background: -webkit-linear-gradient(120deg, #2B4C7E, #567EBB, #DCE0E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 20s infinite linear;
+}
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+.carImage {
+    margin-bottom: 50%;
+}
+
+.carousel-caption {
+    color: #DCE0E6;
+}
+
+.label, label.inline {
+    display: inline-block;
+    width: 125px;
+}
+
+.label2, label.inline {
+    display: inline-block;
+    width: 115px;
+}
+
+.logoutDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logoutBtn {
+    background: #1F1F20;
+    color: #DCE0E6;
+}
+
+.logoutBtn:hover {
+    background: #DCE0E6;
+    color: #1F1F20;
+}
+
+.profileBtns:hover {
+    background: #1F1F20;
+    color: #DCE0E6;
+}
+
+.thumb {
+    margin-top: 8%
+}
+
+.hoverBorder {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+
+.hoverBorder:hover {
+    border: 5px ridge #2B4C7E;
+}
+
+.removeBtn {
+    margin: -10px -5px;
+}
+
+/*zoom css*/
+.fond {
+    position: absolute;
+    padding-top: 85px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00506b;
+}
+
+.style_prevu_kit {
+    display: inline-block;
+    border: 0;
+    width: 370px;
+    height: 420px;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+.style_prevu_kit:hover {
+    box-shadow: 0 0 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+    cursor: crosshair;
+}
+
+.thumbNailCursor {
+    cursor: pointer;
+}
+
+.cartItemInfo {
+    margin: 0 15px 10px 50px;
+}
+
+.yellow {
+    background-color: #f8e5a3;
+    font-size: large;
+}
+
+.white {
+    background-color: transparent;
+    border: 0 solid;
+    font-size: large;
+
+}
+
+.green {
+    background-color: springgreen
+}

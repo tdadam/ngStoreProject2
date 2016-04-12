@@ -1,0 +1,40 @@
+{
+  "name": "angular-image-zoom-nested",
+  "version": "0.2.1",
+  "homepage": "https://github.com/DropsOfSerenity/angular-image-zoom",
+  "authors": [
+    "owlsomely"
+  ],
+  "description": "Add a hover zoom with a magnifying lens to images in angular",
+  "main": [
+    "dist/image-zoom.js",
+    "dist/image-zoom.css"
+  ],
+  "keywords": [
+    "zoom",
+    "image",
+    "angular",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "_*",
+    ".*",
+    "CHANGELOG",
+    "doc",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "src",
+    "lib",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "1.2.16"
+  }
+}
+

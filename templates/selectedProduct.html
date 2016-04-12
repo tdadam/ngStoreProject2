@@ -1,0 +1,53 @@
+<div>
+    <div>
+        <div class="centered alert titleDiv">
+            <h1 class="title" ui-sref="home"><i class="fa fa-shopping-bag largerBag magicTitle"></i> Super-Duper
+                Megastore</h1>
+            <div class="row">
+                <div class="col-sm-12 right">
+                    <input placeholder="Search" type="text" width="200" name="newSearch" ng-model="se.newSearchQuery"
+                           ng-keypress="se.clickEnter($event, se.newSearchQuery)" >
+                    <button class="btn searchBtn" id="searchBtn" ng-click="se.newSearch()"><i
+                            class="fa fa-search largeIcon magicTitle"></i> Search Our Products
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="alert resultsDiv">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-6 centered">
+                            <h3><tt>{{se.selected.name}}</tt></h3>
+                            <img class="style_prevu_kit"  ng-src="{{se.currentImage}}"/><br>
+                        </div>
+
+                        <div class="col-md-6" style="margin-top: 4.5%;">
+                           <div class="col-sm-3 thumb" ng-repeat="otherPics in se.selected.imageEntities">
+                               <img class="thumbNailCursor" ng-click="se.sendIndex($index)" ng-src="{{otherPics.thumbnailImage}}">
+
+                           </div>
+                            <div class="col-sm-12">
+                            <div class="row">
+                                <toaster-container style="margin-top: 200px" toaster-options="{'time-out': 2300}"></toaster-container>
+                                <p class="whiteFont descriptionSmall" style="text-align: left; margin-top: 4%" ng-hide="loggedIn"><a class="linkStyle" ui-sref="login">Login/Register</a> to add items to your cart.</p>
+                                <button class="btn btn-success" style="margin-top: 4%" ng-show="loggedIn" ng-click="se.addToCart(se.selected)"><i
+                                        class="fa fa-cart-plus fa-lg"></i> Add to Cart
+                                </button>
+                                <br><br>
+                                <span class="whiteFont">Item Description: </span><tt
+                                    style="width: 530px; white-space: pre-wrap; word-wrap: break-word; word-break: normal;">{{se.selected.shortDescription}}</tt><br>
+                                <tt><span class="whiteFont">Item id:</span> {{se.selected.itemId}}</tt><br>
+                                <tt><span class="whiteFont">Our Price:</span> {{se.selected.salePrice | currency}}</tt><br>
+                                <tt><span class="whiteFont">MSRP:</span> {{se.selected.msrp | currency}}</tt><br>
+                                <tt><span class="whiteFont">Shipping:</span> {{se.selected.standardShipRate | currency}}</tt><br>
+                                <img ng-src="{{se.selected.customerRatingImage}}"/><br>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

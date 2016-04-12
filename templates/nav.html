@@ -1,0 +1,18 @@
+<div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-pills">
+            <li role="presentation" ng-class="{ active: nav.isActive('/home')}">
+                <a ui-sref="home" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-home"></i> Home</a></li>
+            <li role="presentation" ng-class="{ active: nav.isActive('/contact')}">
+                <a ui-sref="contact" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-envelope"></i> Contact</a></li>
+        </ul>
+        <ul class="nav navbar-right navbar-nav nav-pills">
+            <li ng-hide="loggedIn" role="presentation" style="text-align: right" ng-class="{ active: nav.isActive('/login')}">
+                <a ui-sref="login" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-sign-in"></i> Login/Register</a></li>
+            <li ng-show="loggedIn" role="presentation" style="text-align: right" ng-class="{ active: nav.isActive('/account')}">
+                <a ui-sref="account" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-user"></i> Profile</a></li>
+            <li role="presentation" style="text-align: right" ng-class="{ active: nav.isActive('/cart')}">
+                <a ui-sref="cart" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </div>
+</div>

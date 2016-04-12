@@ -1,0 +1,66 @@
+<div>
+    <div class="centered alert titleDiv">
+        <h1><i class="fa fa-shopping-bag magicTitle largerBag"></i> Super-Duper Megastore</h1>
+        <div class="searchBar right">
+            <input placeholder="Search" type="text" width="200" name="queryInput" ng-model="hc.searchQuery"
+                   ng-keypress="hc.myFunc($event, hc.searchQuery)">
+            <button class="btn searchBtn" id="searchBtn" ng-click="hc.search()"><i
+                    class="fa fa-search magicTitle largeIcon"></i> Search Our Products
+            </button>
+            <br>
+        </div>
+    </div>
+    <div>
+        <div class="alert featuredDiv" style="margin: 1% auto">
+            <h2 class="centered featured">Featured:</h2>
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="display: inline-block">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" style="cursor: pointer">
+                    <div class="item centered" ng-class="{active:!$index}"
+                         ng-repeat=" dat in hc.carouselDat | limitTo:4" ng-click="hc.selectedItem(dat)"
+                         ui-sref="select">
+
+                        <!--<div class="carousel-caption" style="margin: 350px 80px;"></div>-->
+                        <div class="text-center">
+                            <h3 style="margin: 10px 80px 10px;"><span class="featureName">{{dat.name}}</span></h3>
+                        </div>
+                        <img class="carImage" ng-src="{{dat.largeImage}}">
+                        <div class="text-center">
+                            <h2 class="whiteFont" style="margin: 10px 80px 20px; text-decoration: underline">Our Low Price: {{dat.salePrice | currency}}</h2>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <p class="centered">
+                    <a class="left linkStyle noUnderline" href="#myCarousel" role="button" data-slide="prev">
+                        <!--<span class="fa fa-2x">Prev <i class="fa fa-chevron-circle-left"></i></span>-->
+                        <i class="fa fa-chevron-circle-left fa-2x"> Prev</i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <span style="margin: 50px"></span>
+                    <a class="right linkStyle noUnderline" href="#myCarousel" role="button" data-slide="next">
+                        <span class="fa fa-2x">Next <i class="fa fa-chevron-circle-right"></i></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="alert featuredDiv">
+        <h2 class="centered">Welcome to Super-Duper MegaStore!</h2>
+        <p class="featureName description">Super-Duper Megastore is your destination for the most super-duper deals</p>
+        <p class="featureName descriptionSmall">We hope you have an enjoyable experience with our site. We appreciate your
+            feedback so please visit the <a class="linkStyle" ui-sref="contact">contact page</a> if you have something to say about the site, or want some
+            questions answered. If you want to find a product, use the search at the top of the page to find
+            whatever you may be looking for.</p>
+        <p class="whiteFont descriptionSmall">Please note that if you wish to add items to your cart you must first <a class="linkStyle" ui-sref="login">Login/Register</a>.</p>
+    </div>
+</div>

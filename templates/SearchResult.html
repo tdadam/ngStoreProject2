@@ -1,0 +1,27 @@
+<div>
+    <div class="centered alert titleDiv">
+        <h1 class="title" ui-sref="home"><i class="fa fa-shopping-bag magicTitle largerBag"></i> Super-Duper Megastore</h1>
+        <div class="row">
+            <div class="col-sm-12 right">
+                <input placeholder="Search" type="text" width="200"  name="newSearchInput" ng-model="sc.newSearch" ng-keypress="sc.clickEnter($event, sc.newSearch)">
+                <button class="btn searchBtn" id="searchBtn" ng-click="sc.search()"><i class="fa fa-search largeIcon magicTitle"></i>
+                    Search Our Products
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="alert resultsDiv container">
+            <h2 class="featuredDiv resultsStyle">Results: </h2>
+            <div class="centered row">
+                <div class="col-md-4" style="display: inline-block;" ng-repeat="data in sc.walData.items | limitTo: sc.searchLim">
+                    <h3 style="white-space: nowrap; width: 100%; overflow: hidden; text-overflow: ellipsis;"><tt>{{data.name}}</tt></h3>
+                    <img ng-src="{{data.largeImage || data.mediumImage || data.thumbnailImage}}"  ng-click="sc.selectedItem(data)" ui-sref="select" class="hoverBorder"/><br>
+                    <span><span class="whiteFont">Item id:</span> {{data.itemId}}</span><br>
+                    <span><span class="whiteFont">Our Price:</span> {{data.salePrice | currency}}</span><br>
+                    <img ng-src="{{data.customerRatingImage}}"/><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div>
+    <div class="centered alert titleDiv">
+        <h1 class="title" ui-sref="home"><i class="fa fa-shopping-bag largerBag magicTitle"></i> Super-Duper Megastore
+        </h1>
+    </div>
+    <div class="alert featuredDiv featureName">
+        <div>
+            <h2 class="whiteFont" style="margin-bottom: 40px">Login / Register</h2>
+        </div>
+        <form>
+            <div>
+                <label>
+                    <span class="label featureName lrgfont">Email: </span>
+                    <input type="text" ng-model="email"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span class="label featureName lrgfont">Password: </span>
+                    <input type="password" ng-model="pass"/>
+                </label>
+            </div>
+            <div>
+                <label ng-cloak ng-show="createMode">
+                    <span class="label featureName lrgfont">Confirm Pass: </span>
+                    <input type="password" ng-model="confirm"/>
+                </label>
+            </div>
+            <div>
+                <label ng-cloak ng-show="createMode">
+                    <span class="label featureName lrgfont">First Name:</span>
+                    <input type="text" ng-model="firstName"/>
+                </label>
+            </div>
+            <div>
+                <label ng-cloak ng-show="createMode">
+                    <span class="label featureName lrgfont">Last Name:</span>
+                    <input type="text" ng-model="lastName"/>
+                </label>
+            </div>
+            <div>
+                <button class="btn profileBtns" ng-click="login(email, pass)" ng-hide="createMode">Log In</button>
+                <button class="btn profileBtns" ng-click="createMode = true" ng-hide="createMode">Register</button>
+                <button class="btn profileBtns pull-right" ng-click="authC.facebookLogin()" ng-hide="createMode"><i class="fa fa-facebook-official"></i> Log In with Facebook</button>
+                <button class="btn profileBtns" ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</button>
+                <button class="btn profileBtns" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+                <p ng-show="err" class="error">{{err}}</p>
+            </div>
+        </form>
+        <div>
+            <div>{{ authC.fbData.facebook.displayName }}</div>
+        </div>
+        <div>{{profile.email}}</div>
+    </div>
+</div>
